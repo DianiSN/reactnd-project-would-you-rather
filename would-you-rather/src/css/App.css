@@ -1,0 +1,28 @@
+.text-center{
+  text-align: center;
+}
+
+.center-layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.site-layout-content{
+  background-color: #fff;
+}
+
+.logo {
+  color: #fff;
+  float: right;
+}
+
+.user-name{
+  margin: 0 10px;
+}
+
+.login-sub{
+  font-size: 11px;
+  font-weight: 100;
+}
