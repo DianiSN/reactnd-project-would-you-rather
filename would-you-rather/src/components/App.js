@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import Nav from './Nav'
 import Login from './Login'
 import { Layout } from 'antd'
+import { handleInitialData } from '../actions/shared'
 
 
 const App = () => {
-
   const { Content, Footer } = Layout
+  const dispatch = useDispatch()
+  
+  useEffect(() => {
+    dispatch(handleInitialData())
+  }, [])
 
   return (
     <Layout className="layout" style={{minHeight:"100vh"}}>
