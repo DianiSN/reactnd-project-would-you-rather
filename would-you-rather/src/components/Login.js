@@ -1,20 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { shallowEqual, useSelector, useDispatch } from 'react-redux'
+import { handleSetAuthedUser } from '../actions/authedUser'
 import logo from '../app-logo.svg'
 import { Card, Select, Button, Space } from 'antd'
 
-const Login = () => {
+const Login = (props) => {
 
   const { Option } = Select
+  const dispatch = useDispatch()
+  const [authedUser, setAuthedUser] = useState(null)
+
+  const users = useSelector(state => {
+    return {
+      users: state.users,
+      userIds: Object.keys(state.users),
+    }
+  },
+  shallowEqual);
+
+  const onUserChange = (userId) => {
+    setAuthedUser(userId)
+  }
+
+  const toHome = (e) => {
+    e.preventDefault()
+    dispatch(handleSetAuthedUser(authedUser))
+    props.history.push(`/home`)
+
+  }
 
   return (
       <Card title={<div><div className="text-center">Welcome to Would you rather...?</div><div className="login-sub text-center">Please log-in to continue</div></div>} style={{ width: 400, height: 450}}>
         <Space direction="vertical" style={{ width: '100%' }}>
           <img src={logo} className="App-logo" alt="logo" style={{ width: '70%', margin: '0 0 10px 45px' }}/>
-          <Select placeholder="Select a user" style={{ width: '100%' }}>
-            <Option value="jack">Jack</Option>
-            <Option value="lucy">Lucy</Option>
+          <Select placeholder="Select a user" style={{ width: '100%' }} onChange={onUserChange}>
+            {
+              users.userIds.map(userId => (
+                <Option key={userId} value={userId}>{users.users[userId].name}</Option>
+              ))
+            }
           </Select>
-          <Button type="primary" style={{ width: '100%' }}>Log In</Button>
+          <Button type="primary" style={{ width: '100%' }} onClick={toHome}>Log In</Button>
         </Space>
       </Card>
   )
