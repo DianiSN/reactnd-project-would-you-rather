@@ -8,9 +8,9 @@ const Nav = () => {
 
   const { Header } = Layout
 
-  const userName = useSelector(state => {
+  const user = useSelector(state => {
     if(state.authedUser){
-      return state.users[state.authedUser].name
+      return state.users[state.authedUser]
     }else{
       return false
     }
@@ -19,11 +19,11 @@ const Nav = () => {
   return (
     <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       {
-          userName &&
+          user &&
           <Fragment>
             <div className="logo">
-                <Avatar icon={<UserOutlined />} />
-                <span className="user-name">{userName}</span>
+                <Avatar src={user.avatarURL}/>
+                <span className="user-name">{user.name}</span>
                 <Button type="text" style={{ color: '#fff' }}>
                   <LogoutOutlined />
                 </Button>
