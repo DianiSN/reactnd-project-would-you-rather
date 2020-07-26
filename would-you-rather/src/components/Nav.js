@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Layout, Menu, Avatar, Result, Button } from 'antd'
+import { Layout, Menu, Avatar, Button } from 'antd'
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons'
 
 const Nav = () => {
@@ -29,8 +29,8 @@ const Nav = () => {
                 </Button>
             </div>
 
-            <Menu theme="dark" mode="horizontal">
-              <Menu.Item key="1">
+            <Menu theme="dark" mode="horizontal" selectedKeys={['home']}>
+              <Menu.Item key="home">
                 <NavLink to='/home' exact>
                   Home
                 </NavLink>

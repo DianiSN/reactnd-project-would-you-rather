@@ -9,6 +9,7 @@ const Login = (props) => {
   const { Option } = Select
   const dispatch = useDispatch()
   const [authedUser, setAuthedUser] = useState(null)
+  const [disabled, setDisabled] = useState(true)
 
   const users = useSelector(state => {
     return {
@@ -19,7 +20,12 @@ const Login = (props) => {
   shallowEqual);
 
   const onUserChange = (userId) => {
-    setAuthedUser(userId)
+    if(userId){
+      setAuthedUser(userId)
+      setDisabled(false)
+    }else{
+      setDisabled(true)
+    }
   }
 
   const toHome = (e) => {
@@ -40,7 +46,7 @@ const Login = (props) => {
               ))
             }
           </Select>
-          <Button type="primary" style={{ width: '100%' }} onClick={toHome}>Log In</Button>
+          <Button type="primary" style={{ width: '100%' }} disabled={disabled} onClick={toHome}>Log In</Button>
         </Space>
       </Card>
   )
