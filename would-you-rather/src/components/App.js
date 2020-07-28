@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Nav from './Nav'
 import Login from './Login'
 import Home from './Home'
+import Leaderboard from './Leaderboard'
 import { Layout } from 'antd'
 import { handleInitialData } from '../actions/shared'
 
@@ -33,6 +34,7 @@ const App = () => {
               : <div>
                   <Route path="/" exact component={Login} />
                   <Route path="/home" exact component={Home} />
+                  <Route path="/leaderboard" exact component={Leaderboard} />
                 </div>
             }
           </Content>
@@ -45,4 +47,4 @@ const App = () => {
 
 export default App
 
-//// <div className="site-layout-content"  style={{ padding: 24, minHeight: 550 }}>Content</div>
+//<Route path="/question/:id" exact component={QuestionView} />
