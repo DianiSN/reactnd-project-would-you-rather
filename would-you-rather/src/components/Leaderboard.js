@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import StandingsCard from './StandingsCard'
-import { Space, PageHeader } from 'antd'
+import { Space } from 'antd'
 
 const Leaderboard = () => {
 
