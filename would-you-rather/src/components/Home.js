@@ -38,15 +38,17 @@ const Home = () => {
       activeTabKey={activeTab}
       onTabChange={onTabChange}
     >
-      {
-        activeTab == 'unanswered' ?
-        unansweredQs.map((questionId) => (
-          <QuestionCard key={questionId} authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
-        )) :
-        answeredQs.map((questionId) => (
-          <QuestionCard key={questionId} authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
-        ))
-      }
+      <Space direction="vertical">
+        {
+          activeTab === 'unanswered' ?
+          unansweredQs.map((questionId) => (
+            <QuestionCard key={questionId} authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
+          )) :
+          answeredQs.map((questionId) => (
+            <QuestionCard key={questionId} authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
+          ))
+        }
+      </Space>
     </Card>
   )
 }

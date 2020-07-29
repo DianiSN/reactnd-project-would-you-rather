@@ -33,16 +33,18 @@ const Nav = () => {
                 </Button>
             </div>
 
-            <Menu theme="dark" mode="horizontal" onClick={onPageChange} selectedKeys={activeKey}>
+            <Menu theme="dark" mode="horizontal" onClick={onPageChange} defaultSelectedKeys={'home'} selectedKeys={activeKey}>
               <Menu.Item key="home">
-                <NavLink to='/home' exact>
-                  Home
+                <NavLink to="/home" exact>
+                  <span style={{margin: 20}}>Home</span>
                 </NavLink>
               </Menu.Item>
-              <Menu.Item key="2">New Question</Menu.Item>
-              <Menu.Item key="3">
-                <NavLink to='/leaderboard' exact>
-                  Leader Board
+              <Menu.Item key="2">
+                <span style={{margin: 20}}>New Question</span>
+              </Menu.Item>
+              <Menu.Item key="leaderboard">
+                <NavLink to="/leaderboard" exact>
+                  <span style={{margin: 20}}>Leaderboard</span>
                 </NavLink>
               </Menu.Item>
             </Menu>

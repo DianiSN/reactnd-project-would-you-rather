@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import StandingsCard from './StandingsCard'
-import { Space } from 'antd'
+import { Space, PageHeader } from 'antd'
 
 const Leaderboard = () => {
 
@@ -19,20 +19,24 @@ const Leaderboard = () => {
     })
 
     return (
-      <Space direction="vertical">
-        {
-          Object.keys(users).map((userId, index) => (
-            <StandingsCard
-              key={index}
-              name={users[userId].name}
-              avatar={users[userId].avatarURL}
-              answered={Object.keys(users[userId].answers).length}
-              created={users[userId].questions.length}
-              place={index+1}
-            />
-          ))
-        }
-      </Space>
+      <div style={{textAlign: 'center'}}>
+        <h1>Leaderboard</h1>
+        <Space direction="vertical">
+          {
+            Object.keys(users).map((userId, index) => (
+              <StandingsCard
+                key={index}
+                name={users[userId].name}
+                avatar={users[userId].avatarURL}
+                answered={Object.keys(users[userId].answers).length}
+                created={users[userId].questions.length}
+                place={index+1}
+              />
+            ))
+          }
+        </Space>
+      </div>
+      
     )
 }
 
