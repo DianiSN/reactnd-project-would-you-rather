@@ -40,7 +40,6 @@ const App = () => {
                   <Route path="/newQuestion" exact component={NewQuestion} />
                   <Route path="/question/:id" exact component={QuestionView} />
                   <Route path="/leaderboard" exact component={Leaderboard} />
-                  <Route component={Page404} />
                 </div>
             }
           </Content>

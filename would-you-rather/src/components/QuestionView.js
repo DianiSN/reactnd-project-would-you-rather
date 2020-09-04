@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import QuestionCard from './QuestionCard'
+import Page404 from './Page404'
 
 const QuestionView = (props) => {
 
@@ -24,7 +25,7 @@ const QuestionView = (props) => {
     {
       (question) ? 
       <QuestionCard cardType={question.cardType} authorName={question.authorName} authorAvatar={question.authorAvatar} question={question}/> :
-      ''
+      <Page404/>
     }
     </Fragment>
   )
