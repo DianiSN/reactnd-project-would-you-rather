@@ -10,7 +10,7 @@ const CardResult = (props) => {
     const authedUser = useSelector((state) => state.authedUser)
     console.log((question.optionOne.votes.includes(authedUser)))
     return (
-        <div style={{margin: 20}}>
+        <div style={{margin: 20, width: '100%'}}>
             <h2>Results:</h2>
             <div style={{margin: 10}}>
                 <span>
@@ -27,7 +27,7 @@ const CardResult = (props) => {
                         </span>
                     </strong>
                     <div style={{textAlign: 'center'}}>{question.optionOne.votes.length} of {totalVotes}</div>
-                    <Progress percent={(question.optionOne.votes.length/totalVotes) * 100} status="normal"/>
+                    <Progress percent={Math.floor((question.optionOne.votes.length/totalVotes) * 100)} status="normal"/>
                 </span>
             </div>
             <div style={{margin: 10}}>
@@ -45,7 +45,7 @@ const CardResult = (props) => {
                         </span>
                     </strong>
                     <div style={{textAlign: 'center'}}>{question.optionTwo.votes.length} of {totalVotes}</div>
-                    <Progress percent={(question.optionTwo.votes.length/totalVotes) * 100} status="normal"/>
+                    <Progress percent={Math.floor((question.optionTwo.votes.length/totalVotes) * 100)} status="normal"/>
                 </span>
             </div>
         </div>

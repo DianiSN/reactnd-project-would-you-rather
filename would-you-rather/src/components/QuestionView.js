@@ -20,6 +20,8 @@ const QuestionView = (props) => {
     }
   })
 
+  console.log(question);
+
   return (
     <Fragment>
     {

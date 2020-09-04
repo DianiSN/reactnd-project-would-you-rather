@@ -1,6 +1,7 @@
 import React, { useEffect, Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import LoadingBar from 'react-redux-loading'
 import Nav from './Nav'
 import Login from './Login'
 import Home from './Home'
@@ -26,6 +27,7 @@ const App = () => {
       <Fragment>
         <Layout className="layout" style={{minHeight:"100vh"}}>
           <Nav />
+          <LoadingBar style={{marginTop: 65, backgroundColor: '#1890ff'}}/>
           <Content className="center-layout" style={{ padding: '30px 50px', marginTop: 64}}>
             {
               loggedOut === true

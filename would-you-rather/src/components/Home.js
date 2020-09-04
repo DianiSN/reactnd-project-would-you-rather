@@ -15,6 +15,15 @@ const Home = () => {
         unansweredQs: questionIds.filter(questionId => !answeredIds.includes(questionId))
       }
   })
+
+  const answered = answeredQs.map((questionId) => (
+    <QuestionCard key={questionId} cardType="summary" authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
+  ))
+
+  const unanswered = unansweredQs.map((questionId) => (
+    <QuestionCard key={questionId} cardType="summary" authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
+  ))
+
   const tabs = [
     {
       key: 'unanswered',
@@ -28,7 +37,6 @@ const Home = () => {
 
   const onTabChange = (key) => {
       setActiveTab(key)
-      // this.onTabChange(key, 'noTitleKey');
   }
 
   return (
@@ -41,12 +49,8 @@ const Home = () => {
       <Space direction="vertical">
         {
           activeTab === 'unanswered' ?
-          unansweredQs.map((questionId) => (
-            <QuestionCard key={questionId} cardType="summary" authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
-          )) :
-          answeredQs.map((questionId) => (
-            <QuestionCard key={questionId} cardType="summary" authorName={users[questions[questionId].author].name} authorAvatar={users[questions[questionId].author].avatarURL} question={questions[questionId]}/>
-          ))
+          (unanswered.length ? unanswered : 'You have answered all the polls') :
+          (answered.length ? answered : 'Answer some questions from the unanswered tab')
         }
       </Space>
     </Card>

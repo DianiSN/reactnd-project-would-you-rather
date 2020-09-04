@@ -8,7 +8,7 @@ const CardSummary = (props) => {
 
     const toQuestion = (e, id) => {
         e.preventDefault()
-        props.history.push(`/question/${id}333`)
+        props.history.push(`/question/${id}`)
     }
 
     return (
