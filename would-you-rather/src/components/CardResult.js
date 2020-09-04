@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Progress, Space } from 'antd'
+import { Progress } from 'antd'
 import { CheckCircleTwoTone } from '@ant-design/icons';
 
 

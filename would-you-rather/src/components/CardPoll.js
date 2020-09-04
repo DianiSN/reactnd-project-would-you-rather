@@ -3,7 +3,7 @@ import { Radio, Button } from 'antd'
 
 const CardPoll = (props) => {
 
-    const { options, questionId } = props
+    const { options } = props
     const radioStyle = {
         display: 'block',
         height: '30px',

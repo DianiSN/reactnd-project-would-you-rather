@@ -7,7 +7,6 @@ import Home from './Home'
 import Leaderboard from './Leaderboard'
 import QuestionView from './QuestionView'
 import NewQuestion from './NewQuestion'
-import Page404 from './Page404'
 import { Layout } from 'antd'
 import { handleInitialData } from '../actions/shared'
 
@@ -37,7 +36,7 @@ const App = () => {
               : <div>
                   <Route path="/" exact component={Login} />
                   <Route path="/home" exact component={Home} />
-                  <Route path="/newQuestion" exact component={NewQuestion} />
+                  <Route path="/add" exact component={NewQuestion} />
                   <Route path="/question/:id" exact component={QuestionView} />
                   <Route path="/leaderboard" exact component={Leaderboard} />
                 </div>
@@ -52,4 +51,3 @@ const App = () => {
 
 export default App
 
-//<Route path="/question/:id" exact component={QuestionView} />
