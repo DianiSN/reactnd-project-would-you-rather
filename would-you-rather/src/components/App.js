@@ -6,6 +6,7 @@ import Login from './Login'
 import Home from './Home'
 import Leaderboard from './Leaderboard'
 import QuestionView from './QuestionView'
+import NewQuestion from './NewQuestion'
 import { Layout } from 'antd'
 import { handleInitialData } from '../actions/shared'
 
@@ -35,6 +36,7 @@ const App = () => {
               : <div>
                   <Route path="/" exact component={Login} />
                   <Route path="/home" exact component={Home} />
+                  <Route path="/newQuestion" exact component={NewQuestion} />
                   <Route path="/question/:id" exact component={QuestionView} />
                   <Route path="/leaderboard" exact component={Leaderboard} />
                 </div>
