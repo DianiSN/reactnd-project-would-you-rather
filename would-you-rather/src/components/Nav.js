@@ -39,8 +39,8 @@ const Nav = () => {
                   <span style={{margin: 20}}>Home</span>
                 </NavLink>
               </Menu.Item>
-              <Menu.Item key="newQuestion">
-                <NavLink to="/newQuestion" exact>
+              <Menu.Item key="add">
+                <NavLink to="/add" exact>
                   <span style={{margin: 20}}>New Question</span>
                 </NavLink>
               </Menu.Item>

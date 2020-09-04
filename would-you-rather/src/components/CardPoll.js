@@ -57,7 +57,7 @@ const CardPoll = (props) => {
                 }
                 </Radio>
             </Radio.Group>
-            <Button type="primary" style={{ marginTop: 20 }} onClick={handleSelectAnswer} block>Submit</Button>
+            <Button type="primary" style={{ marginTop: 20 }} disabled={answer == null} onClick={handleSelectAnswer} block>Submit</Button>
         </div>
     )
 }
