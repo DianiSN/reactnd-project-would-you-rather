@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import { handleAddQuestion } from '../actions/questions'
+import { handleAddQuestion } from '../actions/shared'
 import { Card, Form, Button, Input } from 'antd'
 
 const NewQuestion = () => {
@@ -13,6 +13,10 @@ const NewQuestion = () => {
     const handleSubmitQuestion = (values) => {
         dispatch(handleAddQuestion(values))
         setToHome(true)
+        document.getElementById('addTab').classList.remove('ant-menu-item-selected')
+        document.getElementById('addTab').getElementsByTagName('a')[0].classList.remove('active')
+        document.getElementById('homeTab').classList.add('ant-menu-item-selected')
+        document.getElementById('homeTab').getElementsByTagName('a')[0].classList.add('active')
     }
 
     if(toHome){

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { handleAnswerQuestion } from '../actions/users'
+import { handleAnswerQuestion } from '../actions/shared'
 import { Radio, Button } from 'antd'
 
 const CardPoll = (props) => {

@@ -34,12 +34,12 @@ const Nav = () => {
             </div>
 
             <Menu theme="dark" mode="horizontal" onClick={onPageChange} defaultSelectedKeys={'home'} selectedKeys={activeKey}>
-              <Menu.Item key="home">
+              <Menu.Item id="homeTab" key="home">
                 <NavLink to="/home" exact>
                   <span style={{margin: 20}}>Home</span>
                 </NavLink>
               </Menu.Item>
-              <Menu.Item key="add">
+              <Menu.Item id="addTab" key="add">
                 <NavLink to="/add" exact>
                   <span style={{margin: 20}}>New Question</span>
                 </NavLink>

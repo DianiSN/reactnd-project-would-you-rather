@@ -26,7 +26,7 @@ const App = () => {
     <Router>
       <Fragment>
         <Layout className="layout" style={{minHeight:"100vh"}}>
-          <Nav />
+          <Nav/>
           <LoadingBar style={{marginTop: 65, backgroundColor: '#1890ff'}}/>
           <Content className="center-layout" style={{ padding: '30px 50px', marginTop: 64}}>
             {
