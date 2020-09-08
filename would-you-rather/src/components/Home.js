@@ -11,8 +11,8 @@ const Home = () => {
       return {
         users: state.users,
         questions: state.questions,
-        answeredQs: questionIds.filter(questionId => answeredIds.includes(questionId)),
-        unansweredQs: questionIds.filter(questionId => !answeredIds.includes(questionId))
+        answeredQs: questionIds.filter(questionId => answeredIds.includes(questionId)).sort((a,b) => state.questions[b].timestamp - state.questions[a].timestamp),
+        unansweredQs: questionIds.filter(questionId => !answeredIds.includes(questionId)).sort((a,b) => state.questions[b].timestamp - state.questions[a].timestamp)
       }
   })
 
