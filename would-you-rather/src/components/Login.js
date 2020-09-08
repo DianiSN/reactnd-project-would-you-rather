@@ -32,7 +32,6 @@ const Login = (props) => {
   const toLocation = (e) => {
     e.preventDefault()
     dispatch(handleSetAuthedUser(authedUser))
-    console.log(props.history.location.pathname);
     if(props.history.location.pathname === '/'){
       props.history.push('/home')
     }else{
