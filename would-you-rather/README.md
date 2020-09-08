@@ -1,70 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Would you Rather Project
 
-## Available Scripts
+An app that lets the user play the game "Would you rather...?". The game works in this way: You pick one of the two options available for the question. The app shows the user how many people have chosen either of the answers and also shows the user which questions they have answered and which ones are unanswered. The user is able to make their own questions as well for them and other users to answer. 
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+This project requires that you have [Node](http://nodejs.org/) installed. To check if you have it installed run the following on a terminal - `node --version`
 
-Runs the app in the development mode.<br />
-Open <http://localhost:3000> to view it in the browser.
+If you do not have [Node](http://nodejs.org/) installed, please [download](https://nodejs.org/en/download/) and install.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Install Project
 
-### `npm test`
+    `$ git clone or download https://github.com/DianiSN/reactnd-project-would-you-rather`
+    `$ cd would-you-rather`
+    `$ npm install`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install` will install the necessary modules for the project to work.
 
-### `npm run build`
+## Start & watch
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To start the project server
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    `$ npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A browser tab will open with a port on the localhost that will show the home page of the project.
 
-### `npm run eject`
+## User Icons & Images
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: <https://facebook.github.io/create-react-app/docs/code-splitting>
-
-### Analyzing the Bundle Size
-
-This section has moved here: <https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size>
-
-### Making a Progressive Web App
-
-This section has moved here: <https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app>
-
-### Advanced Configuration
-
-This section has moved here: <https://facebook.github.io/create-react-app/docs/advanced-configuration>
-
-### Deployment
-
-This section has moved here: <https://facebook.github.io/create-react-app/docs/deployment>
-
-### `npm run build` fails to minify
-
-This section has moved here: <https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify>
-
-"Icon made by Roundicons from www.flaticon.com"
+"Icons made by Roundicons from www.flaticon.com"
