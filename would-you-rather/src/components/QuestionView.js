@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import QuestionCard from './QuestionCard'
-import Page404 from './Page404'
+import { Redirect } from 'react-router-dom'
 
 const QuestionView = (props) => {
 
@@ -20,14 +20,12 @@ const QuestionView = (props) => {
     }
   })
 
-  console.log(question);
-
   return (
     <Fragment>
     {
       (question) ? 
       <QuestionCard cardType={question.cardType} authorName={question.authorName} authorAvatar={question.authorAvatar} question={question}/> :
-      <Page404/>
+      <Redirect to="/notFound"/>
     }
     </Fragment>
   )

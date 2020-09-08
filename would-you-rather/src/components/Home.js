@@ -41,7 +41,6 @@ const Home = () => {
 
   return (
     <Card
-      style={{ width: '100%' }}
       tabList={tabs}
       activeTabKey={activeTab}
       onTabChange={onTabChange}

@@ -8,7 +8,6 @@ const CardResult = (props) => {
     const { question } = props
     const totalVotes = question.optionOne.votes.length + question.optionTwo.votes.length
     const authedUser = useSelector((state) => state.authedUser)
-    console.log((question.optionOne.votes.includes(authedUser)))
     return (
         <div style={{margin: 20, width: '100%'}}>
             <h2>Results:</h2>

@@ -2,7 +2,6 @@ import React from 'react'
 import { Badge, Card } from 'antd'
 
 const StandingsCard = (props) => {
-  console.log(props);
   const { name, avatar, answered, created, place } = props
   const { Meta } = Card;
 

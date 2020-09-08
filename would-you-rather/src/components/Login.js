@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { shallowEqual, useSelector, useDispatch } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { handleSetAuthedUser } from '../actions/authedUser'
 import logo from '../app-logo.svg'
 import { Card, Select, Button, Space } from 'antd'
@@ -28,11 +29,15 @@ const Login = (props) => {
     }
   }
 
-  const toHome = (e) => {
+  const toLocation = (e) => {
     e.preventDefault()
     dispatch(handleSetAuthedUser(authedUser))
-    props.history.push(`/home`)
-
+    console.log(props.history.location.pathname);
+    if(props.history.location.pathname === '/'){
+      props.history.push('/home')
+    }else{
+      props.history.push(`${props.history.location.pathname}`)
+    }
   }
 
   return (
@@ -46,11 +51,11 @@ const Login = (props) => {
               ))
             }
           </Select>
-          <Button type="primary" style={{ width: '100%' }} disabled={disabled} onClick={toHome}>Log In</Button>
+          <Button type="primary" style={{ width: '100%' }} disabled={disabled} onClick={toLocation}>Log In</Button>
         </Space>
       </Card>
   )
 
 }
 
-export default Login
+export default withRouter(Login)
